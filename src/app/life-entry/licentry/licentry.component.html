@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeEntry</title>
+    
+</head>
+<body>
+    <div class="main">
+    <div class="innerCommonHead">
+            <div class="HeadingText">L.I.C Policy Entery</div>
+<!--             
+        <div>
+            <button> <img src=""> Save</button>
+            <button> <img src="save-file-5338.svg"> Reset</button>
+        </div> -->
+        
+            <div class="BtnRight">
+        
+            <input type="submit" name="" value="Save" class="formBlueBTN" style="width:85px; background-image: url(assets/Images/save_BTN.png);">
+        
+            <input type="submit" name="" value="Reset" class="formBlueBTN" style="width:93px; background-image: url(assets/Images/reset_BTN.png);">
+        
+            </div>
+        
+        </div>
+
+    <!-- <hr style="margin-top: 1%;"> -->
+
+<div class="DivideInput">
+      <div class="DivideOne">
+          <p><b>Policy Holder Name</b></p>
+          <br>
+          <input type="text" maxlength="100" autocomplete="off">
+      </div>
+      <div class="DivideTwo">
+          <p><b>Group Code</b></p>
+          <br>
+          <input type="text">
+      </div>
+      <div class="DivideOne">
+          <p><b>Date of Birth</b></p>
+          <br>
+          <input type="date">
+      </div>
+</div>
+
+<div class="DivideInput">
+    <div class="DivideOne">
+        <p><b>Policy Number</b></p>
+        <br>
+        <input type="text" maxlength="100" autocomplete="off">
+    </div>
+    <div class="DivideTwo">
+        <p><b>Commencement Date</b></p>
+        <br>
+        <input type="date">
+    </div>
+    <div class="DivideOne">
+        <p><b>Plan</b></p>
+        <br>
+            <select name="" id="" style="width:250px;height: 32px;">
+                <option>814 - New Endowment with profits</option>
+                <option>815 - New Endowment with profits</option>
+             </select>
+    </div>
+</div>
+
+
+<div class="DivideInput">
+    <div>
+        <p><b>Term</b></p>
+        <br>
+         <select style="width:250px;height: 32px;">
+         <option>25</option>
+         <option>30</option>
+         </select>
+    </div>
+    <div>
+        <p><b>Premium Term</b></p>
+        <br>
+        <select style="width:250px;height: 32px;">
+         <option>25</option>
+         <option>35</option>
+         </select>
+    </div>
+    <div>
+        <p><b>Mode of Premium</b></p>
+        <br>
+        <select style="width:250px;height: 32px;">
+         <option>Monthly</option>
+         <option>Yearly</option>
+        </select>
+    </div>
+</div>
+
+
+<div class="DivideInput">
+    <div>
+        <p><b>Sum Assured</b></p>
+        <br>
+        <input type="text" maxlength="100" autocomplete="off">
+    </div>
+    <div>
+        <p><b>Class Extra Premium Rate per 1000</b></p>
+        <br>
+        <input type="text" maxlength="100" autocomplete="off">
+    </div>
+    <div>
+        <p><b>Basic Yearly Premium</b></p>
+        <br>
+        <input type="text" maxlength="100" autocomplete="off">
+    </div>
+</div>
+
+
+     <div class="innerCommonHead_2">
+        <div>
+          Riders Opted in this Policy
+         </div>                   
+        </div> 
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <th>Rider Name</th>
+                <th>Term</th>
+                <th>Premium Term</th>
+                <th>Premium</th>
+            </tr>
+            <tr>
+                <td> <input type="checkbox" id="vehicle1">  &nbsp; Double Accident Benefit</td>
+                <td>20</td>
+                <td>20</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox" id="vehicle1">  &nbsp; Term Rider Benefit</td>
+                <td>20</td>
+                <td>20</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox" id="vehicle1">  &nbsp;  Critical Illness Rider</td>
+                <td>20</td>
+                <td>20</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="DivideInput">
+    <div>
+        <p><b>GST</b></p>
+        <br>
+        <input type="text" maxlength="100" autocomplete="off">
+    </div>
+    <div>
+        <p><b>1st Year Premium</b></p>
+        <br>
+        <input type="text" maxlength="100" autocomplete="off">
+    </div>
+    <div>
+        <p><b>Subsequent Year Premium</b></p>
+        <br>
+        <input type="text" maxlength="100" autocomplete="off">
+    </div>
+</div>
+
+<div class="AdvanceShow">
+    <input (click) = "showAdv()" type="button" value="Show Advanced Options" class="Show">
+</div>
+<div *ngIf = "!advance" style="margin-top: 200px;">
+</div>
+ 
+<div *ngIf = "advance">
+
+    <ul class="horizontal" id="nav">
+        <li 
+          *ngFor="let state of states"
+          (click)="setStateAsActive(state)">
+          <a [class.active]="state === activeState">
+            {{ state }}
+          </a>
+        </li>
+      </ul>
+
+
+
+</div>
+    <div *ngIf = 'current'>
+        <div class="DivideInput">
+            <div>
+                <p><b>First Unpaid Premium (F.U.P.) Date </b></p>
+                <br>
+                <input type="text" maxlength="100" autocomplete="off">
+            </div>
+            <div>
+                <p><b>Policy Status</b></p>
+                <br>
+                <select style="width:250px;height: 32px;">
+                    <option>In-force</option>
+                    <option>815 - New Endowments with profits</option>
+                   </select>
+            </div>
+            <div>
+                <p><b>Loan Taken</b></p>
+                <br>
+                <input type="text" maxlength="100" autocomplete="off">
+            </div>
+            
+        </div>
+
+        <div class="DivideInput">
+            <div>
+                <p><b>First Unpaid Loan Int.Date (FULI) </b></p>
+                <br>
+                <input type="date" maxlength="100" autocomplete="off">
+            </div>
+            <div>
+                <p><b>Present Risk Covered</b></p>
+                <br>
+                <input type="text" maxlength="100" autocomplete="off">
+            </div>
+            <div>
+                <p><b>Vested Bonus</b></p>
+                <br>
+                <input type="text" maxlength="100" autocomplete="off">
+            </div>
+            
+        </div>
+
+        <div class="DivideInput">
+            <div>
+                <p><b>Paid-Up Value </b></p>
+                <br>
+                <input type="text" maxlength="100" autocomplete="off">
+            </div>
+            <div>
+                <p><b>Surrender Value</b></p>
+                <br>
+                <input type="text" maxlength="100" autocomplete="off">
+            </div>
+            <div>
+                <p><b>Loan Available</b></p>
+                <br>
+                <input type="text" maxlength="100" autocomplete="off">
+            </div>
+            
+        </div>
+        <hr style="margin-top: 30px;">
+        <div style="margin-bottom: 100px;"></div>
+    </div>
+
+    <div *ngIf = 'nominee'>
+        <div class="DivideInput">
+            <div>
+                <p><b>Nominee Type</b></p>
+                <br>
+                <select style="width:250px;height: 32px;">
+                    <option>In-force</option>
+                    <option>815 - New Endowments with profits</option>
+                   </select>
+            </div>
+            <div>
+                <p><b>Nominee Name</b></p>
+                <br>
+                <input type="text" maxlength="100" autocomplete="off">
+            </div>
+            <div>
+                <p><b>Relation with Policy Holder</b></p>
+                <br>
+                <select style="width:250px;height: 32px;">
+                    <option>In-force</option>
+                    <option>815 - New Endowments with profits</option>
+                   </select>
+            </div>
+        </div>
+
+        <div class="DivideInput">
+            <div>
+                <p><b>Appointee Name</b></p>
+                <br>
+                <input type="text" maxlength="100" autocomplete="off">
+            </div>
+        </div>
+        <hr style="margin-top: 30px;">
+        <div style="margin-bottom: 100px;"></div>
+    </div>
+
+    <div *ngIf = 'neft'>
+        <div class="DivideInputneft">
+            <div>
+                <p><b>NACH Mandate Active</b></p>
+                <br>
+                <div class="switch-field">
+                    <input type="radio" id="radio-one" name="switch-one" value="yes" checked/>
+                    <label for="radio-one">Yes</label>
+                    <input type="radio" id="radio-two" name="switch-one" value="no" />
+                    <label for="radio-two">No</label>
+                </div>
+            </div>
+            <div>
+                <p><b>NACH Mandate Active</b></p>
+                <br>
+                <input type="text" maxlength="100" autocomplete="off">
+            </div>
+            <div>
+                <p><b>Bank Name</b></p>
+                <br>
+                <input type="text" maxlength="100" autocomplete="off">
+            </div>
+        
+
+    
+            <div>
+                <p><b>Bank Branch</b></p>
+                <br>
+                <input type="text" maxlength="100" autocomplete="off">
+            </div>
+            <div>
+                <p><b>Account Number</b></p>
+                <br>
+                <input type="text" maxlength="100" autocomplete="off">
+            </div>
+            <div>
+                <p><b>Debit Day</b></p>
+                <br>
+                <select name="" id="" style="width:250px;height: 32px;">
+                    <option>15</option>
+                    <option>20</option>
+                 </select>
+            </div>
+        
+
+        
+            <div>
+                <p><b>NEFT Submission Date (for S.B. / Maturity)</b></p>
+                <br>
+                <input type="date" maxlength="100" autocomplete="off">
+            </div>
+            <div>
+                <p><b>Bank IFSC Code</b></p>
+                <br>
+                <input type="text" maxlength="100" autocomplete="off">
+            </div>
+            <div>
+                <p><b>Bank Name</b></p>
+                <br>
+                <input type="text" maxlength="100" autocomplete="off">
+            </div>
+        
+
+        
+            <div>
+                <p><b>Bank Branch</b></p>
+                <br>
+                <input type="text" maxlength="100" autocomplete="off">
+            </div>
+            <div>
+                <p><b>Account Number</b></p>
+                <br>
+                <input type="text" maxlength="100" autocomplete="off">
+            </div>
+            <div>
+                <p><b>Account Type</b></p>
+                <br>
+                <select name="" id="" style="width:250px;height: 32px;">
+                    <option>saving</option>
+                    <option>current</option>
+                 </select>
+            </div>
+        
+            
+        </div>
+        <div style="margin-bottom: 100px;"></div>
+        <hr style="margin-top: 30px;">
+    </div>
+
+    <div *ngIf = 'more'>
+        <div class="DivideInputmore">
+            <div>
+                <p><b>Sales Channel</b></p>
+                <br>
+                <select name="" id="" style="width:250px;height: 32px;">
+                    <option>nominee</option>
+                    <option>current</option>
+                 </select>
+            </div>
+            <div>
+                <p><b>Agency</b></p>
+                <br>
+                <select name="" id="" style="width:250px;height: 32px;">
+                    <option>sushmita</option>
+                    <option>current</option>
+                 </select>
+            </div>
+            <div>
+                <p><b>LIC Servicing Branch</b></p>
+                <br>
+                <select name="" id="" style="width:250px;height: 32px;">
+                    <option>924</option>
+                    <option>current</option>
+                 </select>
+            </div>
+            <div>
+                <p><b>Medical</b></p>
+                <br>
+                <select name="" id="" style="width:250px;height: 32px;">
+                    <option>nominee</option>
+                    <option>current</option>
+                 </select>
+            </div>
+            <div>
+                <p><b>Age Proof Admitted</b></p>
+                <br>
+                <div class="switch-field">
+                    <input type="radio" id="radio-one" name="switch-one" value="yes" checked/>
+                    <label for="radio-one">Yes</label>
+                    <input type="radio" id="radio-two" name="switch-one" value="no" />
+                    <label for="radio-two">No</label>
+                </div>
+            </div>
+            <div>
+                <p><b>Maturity Option</b></p>
+                <br>
+                <select name="" id="" style="width:250px;height: 32px;">
+                    <option>Lump Sum</option>
+                    <option>current</option>
+                </select>
+            </div>
+            <div>
+                <p><b>Completion Date</b></p>
+                <br>
+                <input type="date" maxlength="100" autocomplete="off">
+            </div>
+            <div>
+                <p><b>Tax Beneficiary</b></p>
+                <br>
+                <input type="text" maxlength="100" autocomplete="off">
+            </div>
+            <div>
+                <p><b>Tax Beneficiary</b></p>
+                <br>
+                <select name="" id="" style="width:250px;height: 32px;">
+                    <option></option>
+                    <option></option>
+                </select>
+            </div>
+        </div>
+        <hr style="margin-top: 30px;">
+        <div style="margin-bottom: 100px;"></div>
+    </div>
+
+    <div *ngIf = 'doc'>
+        <div class="DivideInput">
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Date</th>
+                        <th>Reference No.</th>
+                        <th>Document Description</th>
+                        <th>File</th>
+                    </tr>
+                    <tr *ngFor = "let item of table">
+                        <td> <img class="delIcon" src="assets/Images/icondelete.png"> 1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr style="margin-top: 30px;">
+        <div style="margin-bottom: 100px;"></div>
+    </div>
+
+    <div *ngIf = 'notes'>
+        <div class="DivideInput">
+            <textarea name="" id="" cols="150" rows="7"></textarea>
+        </div>
+        <hr style="margin-top: 30px;">
+        <div style="margin-bottom: 100px;"></div>
+    </div>
+</div>
+
+</body>
+</html>
