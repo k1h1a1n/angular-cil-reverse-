@@ -11,7 +11,8 @@ import {MatInputModule} from '@angular/material/input';
     MatInputModule,
     MatSelectModule,
     MatSliderModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    
   ]
 })
 
