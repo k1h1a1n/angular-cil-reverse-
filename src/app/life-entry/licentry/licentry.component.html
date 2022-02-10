@@ -25,11 +25,12 @@
             </div>
 
         </div>
-        <div class="DivideInput">
+       <div class="DivideInputneft">
             <div class="DivideOne">
                 <p><b>Policy Holder Name</b></p>
                 <br>
-                <input type="text" maxlength="100" autocomplete="off">
+                <input type="text" maxlength="100">
+                <img style="margin-left: 8px;" (click)="addRow()" src="assets/Images/iconAddDetails.png">
             </div>
             <div class="DivideTwo">
                 <p><b>Group Code</b></p>
@@ -41,13 +42,13 @@
                 <br>
                 <input type="date">
             </div>
-        </div>
+        
 
-        <div class="DivideInput">
+        
             <div class="DivideOne">
                 <p><b>Policy Number</b></p>
                 <br>
-                <input type="number" maxlength="100" autocomplete="off">
+                <input type="number" maxlength="10">
             </div>
             <div class="DivideTwo">
                 <p><b>Commencement Date</b></p>
@@ -57,19 +58,19 @@
             <div class="DivideOne">
                 <p><b>Plan</b></p>
                 <br>
-                <select name="" id="" style="width:250px;height: 32px;">
+                <select name="" id="">
                     <option>814 - New Endowment with profits</option>
                     <option>815 - New Endowment with profits</option>
                 </select>
             </div>
-        </div>
+        
 
 
-        <div class="DivideInput">
+        
             <div>
                 <p><b>Term</b></p>
                 <br>
-                <select style="width:250px;height: 32px;">
+                <select>
                     <option>25</option>
                     <option>30</option>
                 </select>
@@ -77,7 +78,7 @@
             <div>
                 <p><b>Premium Term</b></p>
                 <br>
-                <select style="width:250px;height: 32px;">
+                <select>
                     <option>25</option>
                     <option>35</option>
                 </select>
@@ -85,32 +86,32 @@
             <div>
                 <p><b>Mode of Premium</b></p>
                 <br>
-                <select style="width:250px;height: 32px;">
+                <select>
                     <option>Monthly</option>
                     <option>Yearly</option>
                 </select>
             </div>
-        </div>
+        
 
 
-        <div class="DivideInput">
+        
             <div>
                 <p><b>Sum Assured</b></p>
                 <br>
-                <input type="number" maxlength="100" autocomplete="off">
+                <input type="number" maxlength="10">
             </div>
             <div>
                 <p><b>Class Extra Premium Rate per 1000</b></p>
                 <br>
-                <input type="number" maxlength="100" autocomplete="off">
+                <input type="number" maxlength="10">
             </div>
             <div>
                 <p><b>Basic Yearly Premium</b></p>
                 <br>
-                <input type="number" maxlength="100" autocomplete="off">
+                <input type="number" maxlength="10">
             </div>
+       
         </div>
-
 
         <div class="innerCommonHead_2">
             <div>
@@ -127,22 +128,22 @@
                         <th>Premium</th>
                     </tr>
                     <tr>
-                        <td> <input type="checkbox" (change)="Editable1($event)" id="vehicle1"> &nbsp; Double Accident Benefit</td>
-                        <td><input (change)="ip1($event)" *ngIf = "EditableOne" class="numip" type="number"><b *ngIf = "!EditableOne">{{ipO}}</b></td>
-                        <td><input (change)="ip2($event)" *ngIf = "EditableOne" class="numip" type="number"><b *ngIf = "!EditableOne">{{ipT}}</b></td>
-                        <td><input (change)="ip3($event)" *ngIf = "EditableOne" class="numip" type="number"><b *ngIf = "!EditableOne">{{ipTh}}</b></td>
+                        <td> <input type="checkbox"  id="vehicle1"> &nbsp; Double Accident Benefit</td>
+                        <td (click)="Editable11()"><input (change)="ip1($event)" *ngIf = "ipO1" class="numip" type="number" maxlength="10"><b *ngIf = "!ipO1">{{ipO}}</b></td>
+                        <td (click)="Editable12()"><input (change)="ip2($event)" *ngIf = "ipO2" class="numip" type="number"><b *ngIf = "!ipO2">{{ipT}}</b></td>
+                        <td (click)="Editable13()"><input (change)="ip3($event)" *ngIf = "ipO3" class="numip" type="number"><b *ngIf = "!ipO3">{{ipTh}}</b></td>
                     </tr>
                     <tr>
-                        <td> <input type="checkbox" (change)="Editable2($event)" id="vehicle1"> &nbsp; Term Rider Benefit</td>
-                        <td> <input (change)="ip4($event)" *ngIf = "EditableTwo" class="numip" type="number"><b *ngIf = "!EditableTwo">{{ipF}}</b></td>
-                        <td><input (change)="ip5($event)" *ngIf = "EditableTwo" class="numip" type="number"><b *ngIf = "!EditableTwo">{{ipFi}}</b></td>
-                        <td><input (change)="ip6($event)" *ngIf = "EditableTwo" class="numip" type="number"><b *ngIf = "!EditableTwo">{{ipS}}</b></td>
+                        <td> <input type="checkbox"  id="vehicle1"> &nbsp; Term Rider Benefit</td>
+                        <td (click)="Editable21()"> <input (change)="ip4($event)" *ngIf = "ipO4" class="numip" type="number"><b *ngIf = "!ipO4">{{ipF}}</b></td>
+                        <td (click)="Editable22()"><input (change)="ip5($event)" *ngIf = "ipO5" class="numip" type="number"><b  *ngIf = "!ipO5">{{ipFi}}</b></td>
+                        <td (click)="Editable23()"><input (change)="ip6($event)" *ngIf = "ipO6" class="numip" type="number"><b  *ngIf = "!ipO6">{{ipS}}</b></td>
                     </tr>
                     <tr>
-                        <td> <input type="checkbox" (change)="Editable3($event)" id="vehicle1"> &nbsp; Critical Illness Rider</td>
-                        <td><input (change)="ip7($event)" *ngIf = "EditableThree" class="numip" type="number"><b *ngIf = "!EditableThree">{{ipSe}}</b></td>
-                        <td><input (change)="ip8($event)" *ngIf = "EditableThree" class="numip" type="number"><b *ngIf = "!EditableThree">{{ipE}}</b></td>
-                        <td><input (change)="ip9($event)" *ngIf = "EditableThree" class="numip" type="number"><b *ngIf = "!EditableThree">{{ipN}}</b></td>
+                        <td> <input type="checkbox"  id="vehicle1"> &nbsp; Critical Illness Rider</td>
+                        <td (click)="Editable31()"><input (change)="ip7($event)" *ngIf = "ipO7" class="numip" type="number"><b  *ngIf = "!ipO7">{{ipSe}}</b></td>
+                        <td (click)="Editable32()"><input (change)="ip8($event)" *ngIf = "ipO8" class="numip" type="number"><b  *ngIf = "!ipO8">{{ipE}}</b></td>
+                        <td (click)="Editable33()"><input (change)="ip9($event)" *ngIf = "ipO9" class="numip" type="number"><b  *ngIf = "!ipO9">{{ipN}}</b></td>
                     </tr>
                 </tbody>
             </table>
@@ -151,28 +152,30 @@
             <div>
                 <p><b>GST</b></p>
                 <br>
-                <input type="number" maxlength="100" autocomplete="off">
+                <input type="number" maxlength="100">
             </div>
             <div>
                 <p><b>1st Year Premium</b></p>
                 <br>
-                <input type="number" maxlength="100" autocomplete="off">
+                <input type="number" maxlength="100">
             </div>
             <div>
                 <p><b>Subsequent Year Premium</b></p>
                 <br>
-                <input type="number" maxlength="100" autocomplete="off">
+                <input type="number" maxlength="100">
             </div>
         </div>
 
         <div class="AdvanceShow">
-            <input (click)="showAdv()" type="button" value="Show Advanced Options" class="Show">
+            <div>
+                <input  (change)="showAdv($event)" type="checkbox" id="btnControl">
+                <label [ngClass]="advance ? 'test' : 'ch'" for="btnControl" class="ch">Show Advance options</label>
+            </div>
         </div>
         <div *ngIf="!advance" style="margin-top: 200px;">
         </div>
 
         <div *ngIf="advance">
-
             <ul class="horizontal" id="nav">
                 <li *ngFor="let state of states" (click)="setStateAsActive(state)">
                     <a [class.active]="state === activeState">
@@ -180,21 +183,19 @@
                     </a>
                 </li>
             </ul>
-
-
-
         </div>
         <div *ngIf='current'>
+            <div style="height: 400px;">
             <div class="DivideInput">
                 <div>
                     <p><b>First Unpaid Premium (F.U.P.) Date </b></p>
                     <br>
-                    <input type="text" maxlength="100" autocomplete="off">
+                    <input type="date" maxlength="100">
                 </div>
                 <div>
                     <p><b>Policy Status</b></p>
                     <br>
-                    <select style="width:250px;height: 32px;">
+                    <select>
                         <option>In-force</option>
                         <option>815 - New Endowments with profits</option>
                     </select>
@@ -202,7 +203,7 @@
                 <div>
                     <p><b>Loan Taken</b></p>
                     <br>
-                    <input type="text" maxlength="100" autocomplete="off">
+                    <input type="text" maxlength="100">
                 </div>
 
             </div>
@@ -211,17 +212,17 @@
                 <div>
                     <p><b>First Unpaid Loan Int.Date (FULI) </b></p>
                     <br>
-                    <input type="date" maxlength="100" autocomplete="off">
+                    <input type="date" maxlength="100">
                 </div>
                 <div>
                     <p><b>Present Risk Covered</b></p>
                     <br>
-                    <input type="text" maxlength="100" autocomplete="off">
+                    <input type="text" maxlength="100">
                 </div>
                 <div>
                     <p><b>Vested Bonus</b></p>
                     <br>
-                    <input type="text" maxlength="100" autocomplete="off">
+                    <input type="text" maxlength="100">
                 </div>
 
             </div>
@@ -230,30 +231,31 @@
                 <div>
                     <p><b>Paid-Up Value </b></p>
                     <br>
-                    <input type="text" maxlength="100" autocomplete="off">
+                    <input type="text" maxlength="100">
                 </div>
                 <div>
                     <p><b>Surrender Value</b></p>
                     <br>
-                    <input type="text" maxlength="100" autocomplete="off">
+                    <input type="text" maxlength="100">
                 </div>
                 <div>
                     <p><b>Loan Available</b></p>
                     <br>
-                    <input type="text" maxlength="100" autocomplete="off">
+                    <input type="text" maxlength="100">
                 </div>
 
             </div>
-            <hr style="margin-top: 30px;">
-            <div style="margin-bottom: 100px;"></div>
+        </div>
+            <hr>
         </div>
 
         <div *ngIf='nominee'>
+            <div style="height: 400px;">
             <div class="DivideInput">
                 <div>
                     <p><b>Nominee Type</b></p>
                     <br>
-                    <select style="width:250px;height: 32px;">
+                    <select>
                         <option>In-force</option>
                         <option>815 - New Endowments with profits</option>
                     </select>
@@ -261,12 +263,12 @@
                 <div>
                     <p><b>Nominee Name</b></p>
                     <br>
-                    <input type="text" maxlength="100" autocomplete="off">
+                    <input type="text" maxlength="100">
                 </div>
                 <div>
                     <p><b>Relation with Policy Holder</b></p>
                     <br>
-                    <select style="width:250px;height: 32px;">
+                    <select>
                         <option>In-force</option>
                         <option>815 - New Endowments with profits</option>
                     </select>
@@ -277,14 +279,15 @@
                 <div>
                     <p><b>Appointee Name</b></p>
                     <br>
-                    <input type="text" maxlength="100" autocomplete="off">
+                    <input type="text" maxlength="100">
                 </div>
             </div>
-            <hr style="margin-top: 30px;">
-            <div style="margin-bottom: 100px;"></div>
+        </div>
+        <hr>
         </div>
 
         <div *ngIf='neft'>
+            <div style="height: 400px;">
             <div class="DivideInputneft">
                 <div>
                     <p><b>NACH Mandate Active</b></p>
@@ -299,12 +302,12 @@
                 <div>
                     <p><b>NACH Mandate Active</b></p>
                     <br>
-                    <input type="text" maxlength="100" autocomplete="off">
+                    <input type="text" maxlength="100">
                 </div>
                 <div>
                     <p><b>Bank Name</b></p>
                     <br>
-                    <input type="text" maxlength="100" autocomplete="off">
+                    <input type="text" maxlength="100">
                 </div>
 
 
@@ -312,17 +315,17 @@
                 <div>
                     <p><b>Bank Branch</b></p>
                     <br>
-                    <input type="text" maxlength="100" autocomplete="off">
+                    <input type="text" maxlength="100">
                 </div>
                 <div>
                     <p><b>Account Number</b></p>
                     <br>
-                    <input type="text" maxlength="100" autocomplete="off">
+                    <input type="text" maxlength="100">
                 </div>
                 <div>
                     <p><b>Debit Day</b></p>
                     <br>
-                    <select name="" id="" style="width:250px;height: 32px;">
+                    <select name="" id="">
                         <option>15</option>
                         <option>20</option>
                     </select>
@@ -333,17 +336,17 @@
                 <div>
                     <p><b>NEFT Submission Date (for S.B. / Maturity)</b></p>
                     <br>
-                    <input type="date" maxlength="100" autocomplete="off">
+                    <input type="date" maxlength="100">
                 </div>
                 <div>
                     <p><b>Bank IFSC Code</b></p>
                     <br>
-                    <input type="text" maxlength="100" autocomplete="off">
+                    <input type="text" maxlength="100">
                 </div>
                 <div>
                     <p><b>Bank Name</b></p>
                     <br>
-                    <input type="text" maxlength="100" autocomplete="off">
+                    <input type="text" maxlength="100">
                 </div>
 
 
@@ -351,17 +354,17 @@
                 <div>
                     <p><b>Bank Branch</b></p>
                     <br>
-                    <input type="text" maxlength="100" autocomplete="off">
+                    <input type="text" maxlength="100">
                 </div>
                 <div>
                     <p><b>Account Number</b></p>
                     <br>
-                    <input type="text" maxlength="100" autocomplete="off">
+                    <input type="text" maxlength="100">
                 </div>
                 <div>
                     <p><b>Account Type</b></p>
                     <br>
-                    <select name="" id="" style="width:250px;height: 32px;">
+                    <select name="" id="">
                         <option>saving</option>
                         <option>current</option>
                     </select>
@@ -369,16 +372,17 @@
 
 
             </div>
-            <div style="margin-bottom: 100px;"></div>
-            <hr style="margin-top: 30px;">
+        </div>
+            <hr>
         </div>
 
         <div *ngIf='more'>
+            <div style="height: 400px;">
             <div class="DivideInputmore">
                 <div>
                     <p><b>Sales Channel</b></p>
                     <br>
-                    <select name="" id="" style="width:250px;height: 32px;">
+                    <select name="" id="">
                         <option>nominee</option>
                         <option>current</option>
                     </select>
@@ -386,7 +390,7 @@
                 <div>
                     <p><b>Agency</b></p>
                     <br>
-                    <select name="" id="" style="width:250px;height: 32px;">
+                    <select name="" id="">
                         <option>sushmita</option>
                         <option>current</option>
                     </select>
@@ -394,7 +398,7 @@
                 <div>
                     <p><b>LIC Servicing Branch</b></p>
                     <br>
-                    <select name="" id="" style="width:250px;height: 32px;">
+                    <select name="" id="">
                         <option>924</option>
                         <option>current</option>
                     </select>
@@ -402,7 +406,7 @@
                 <div>
                     <p><b>Medical</b></p>
                     <br>
-                    <select name="" id="" style="width:250px;height: 32px;">
+                    <select name="" id="">
                         <option>nominee</option>
                         <option>current</option>
                     </select>
@@ -420,7 +424,7 @@
                 <div>
                     <p><b>Maturity Option</b></p>
                     <br>
-                    <select name="" id="" style="width:250px;height: 32px;">
+                    <select name="" id="">
                         <option>Lump Sum</option>
                         <option>current</option>
                     </select>
@@ -428,27 +432,28 @@
                 <div>
                     <p><b>Completion Date</b></p>
                     <br>
-                    <input type="date" maxlength="100" autocomplete="off">
+                    <input type="date" maxlength="100">
                 </div>
                 <div>
                     <p><b>Tax Beneficiary</b></p>
                     <br>
-                    <input type="text" maxlength="100" autocomplete="off">
+                    <input type="text" maxlength="100">
                 </div>
                 <div>
                     <p><b>Tax Beneficiary</b></p>
                     <br>
-                    <select name="" id="" style="width:250px;height: 32px;">
+                    <select name="" id="">
                         <option></option>
                         <option></option>
                     </select>
                 </div>
             </div>
-            <hr style="margin-top: 30px;">
-            <div style="margin-bottom: 100px;"></div>
+        </div>
+        <hr>
         </div>
 
         <div *ngIf='doc'>
+            <div style="height: 400px;">
             <div><img class="addDoc" (click)="addRow()" src="assets/Images/iconAddDetails.png"></div>
             <div class="DivideInput">
                 <table>
@@ -469,16 +474,17 @@
                     </tbody>
                 </table>
             </div>
-            <hr style="margin-top: 30px;">
-            <div style="margin-bottom: 100px;"></div>
+        </div>
+        <hr>
         </div>
 
         <div *ngIf='notes'>
+            <div style="height: 400px;">
             <div class="DivideInput">
                 <textarea name="" id="" cols="150" rows="7"></textarea>
             </div>
-            <hr style="margin-top: 30px;">
-            <div style="margin-bottom: 100px;"></div>
+        </div>
+        <hr>
         </div>
     </div>
 </body>

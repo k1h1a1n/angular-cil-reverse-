@@ -6,7 +6,7 @@ br {
     display:none;
 }
 
-.AdvanceShow input {
+.ch{
     background-color: #fff;
     color: #F1772E;
     border: 1px solid #F1772E;
@@ -14,16 +14,20 @@ br {
     font-weight: 600;
     color: #000;
     border-radius: 5px;
-    transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -webkit-transition: all .3s ease;
+    width: 250px;
     cursor: pointer;
 }
-.AdvanceShow input:hover {
+// .AdvanceShow input:hover {
+//     background-color: #F1772E;
+//     color: #fff;
+// }
+#btnControl {
+    display: none;
+}
+.test{
     background-color: #F1772E;
     color: #fff;
 }
-
 .AdvanceShow {
     text-align: center;
     margin-top: 30px;
@@ -39,26 +43,16 @@ br {
     align-items: center;
 }
 
-input{
-    width:250px;
-    height: 30px;
-}
-
 .main{
-    width: 75%;
+    width: 80%;
     margin: auto;
 }
-// .DivideOne, .DivideTwo, .DivideThree {
-//     display: flex;
-//     align-items: center;
-//     width: 33%;
-//     flex-wrap: wrap;
-// }
+
 
 .innerCommonHead_2 {
     float: left;
     margin-bottom: 20px;
-    margin-top: 2%;
+    margin-top: 7%;
     width: 100%;
     text-align: center;
     font-size: 14px;
@@ -77,12 +71,6 @@ tr {
     border-color: inherit;
 }
 
-th {
-    display: table-cell;
-    vertical-align: inherit;
-    font-weight: bold;
-    text-align: -internal-center;
-}
 
 #vehicle1{
     width: 15px;
@@ -92,7 +80,7 @@ th {
 
 table, td, th {
     border: 1px solid black;
-    padding: 8px;
+    padding: 6px;
   }
   
   
@@ -106,8 +94,7 @@ table, td, th {
     text-align: center;
     background-color: #F6AC69;
   }
-
-
+  
    ul.horizontal li {
     float: left;
     cursor: pointer;
@@ -122,6 +109,7 @@ table, td, th {
     border-bottom: 1px solid #ccc;
     // border-top: 1px solid #ccc;
     box-shadow: 0 0 4px 0px #ccc;
+    text-align: center;
   }
   
   ul.horizontal li a {
@@ -129,14 +117,16 @@ table, td, th {
     display: block;
     position: relative;
     line-height: 32px;
-    padding: 0 16px 0 32px;
+    padding: 0 16px 0 16px;
     white-space: nowrap;
     border-right: 1px solid #ccc;
+    text-align: center;
   }
   
   ul.horizontal li a.active {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
+    text-align: center;
   }
 
 
@@ -146,12 +136,9 @@ table, td, th {
     display: grid;
     grid-template-columns: 37% 37% 37%  ;
     grid-template-rows: 30% 30% 30% 30% ;
-    // margin-bottom: 15px;
-    align-items:left;
+    align-items: left;
     grid-gap:5px  
 }
-
-
 
 .DivideInputmore {
     margin-top: 3%;
@@ -210,23 +197,19 @@ table, td, th {
 
 .switch-field label:first-of-type {
 	border-radius: 8px 0 0 8px;
-    height:37px;
+    height:32;
+    width: 80px;
 }
 
 .switch-field label:last-of-type {
 	border-radius: 0 8px 8px 0;
-    height: 37px;
+    height: 32;
+    width: 80px;
 }
 .delIcon{
-    height: 8%;
-    width: 8%;
+    height: 6%;
+    width: 6%;
 }
-
-
-
-
-
-
 
 .HeadingText {
     color: #309BAE !important;
@@ -289,4 +272,16 @@ table, td, th {
 .numip{
     height: 25px;
     width: 40%;
+}
+
+.btn-change{
+    background-color: #F1772E;
+    color: #fff;
+}
+
+
+b{
+    font-weight: 450;
+    color: rgb(12, 12, 12);
+    font-size: 12px;
 }

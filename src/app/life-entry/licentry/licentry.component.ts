@@ -39,9 +39,15 @@ docTable = [{ "name": "Max", "age": "5", "country": "Anywhere" }]
     'YES',
     'NO',
   ]
-  EditableOne: boolean;
-  EditableTwo: boolean;
-  EditableThree: boolean;
+  ipO1: boolean;
+  ipO2: boolean;
+  ipO3: boolean;
+  ipO4: boolean;
+  ipO5: boolean;
+  ipO6: boolean;
+  ipO7: boolean;
+  ipO8: boolean;
+  ipO9: boolean;
   
 
   
@@ -70,64 +76,92 @@ docTable = [{ "name": "Max", "age": "5", "country": "Anywhere" }]
     this.togglestate = state;
   }
 
-  Editable1(event) {
-    if ( event.target.checked ) {
-        this.EditableOne = true;
-   }
-   else
-        this.EditableOne = false;
+Editable11() {
+    this.ipO1 = true;
 }
-Editable2(event) {
-  if ( event.target.checked ) {
-      this.EditableTwo = true;
- }
- else
-      this.EditableTwo = false;
+Editable12() {
+  this.ipO2 = true;
 }
-Editable3(event) {
-  if ( event.target.checked ) {
-      this.EditableThree = true;
- }
- else
-      this.EditableThree = false;
+Editable13() {
+  this.ipO3 = true;
 }
+Editable21() {
+  this.ipO4 = true;
+}
+Editable22() {
+  this.ipO5 = true;
+}
+Editable23() {
+  this.ipO6 = true;
+}
+Editable31() {
+  this.ipO7 = true;
+}
+Editable32() {
+  this.ipO8 = true;
+}
+Editable33() {
+  this.ipO9 = true;
+}
+
 
 ip1(event){
 this.ipO = event.target.value;
+this.ipO1 = false;
 }
 ip2(event){
   this.ipT = event.target.value;
+  this.ipO2 = false;
 }
 ip3(event){
     this.ipTh = event.target.value;
+    this.ipO3 = false;
 }
 ip4(event){
       this.ipF = event.target.value;
+      this.ipO4 = false;
 }
 ip5(event){
   this.ipFi = event.target.value;
+  this.ipO5 = false;
 }
 ip6(event){
   this.ipS = event.target.value;
+  this.ipO6 = false;
 }
 ip7(event){
   this.ipSe = event.target.value;
+  this.ipO7 = false;
 }
 ip8(event){
   this.ipE = event.target.value;
+  this.ipO8 = false;
 }
 ip9(event){
   this.ipN = event.target.value;
+  this.ipO9 = false;
 }
-  showAdv(){
-    this.advance = true;
-    this.current = true;
-    this.nominee = false;
-    this.neft = false;
-    this.more = false;
-    this.doc = false;
-    this.notes = false;
-    this.activeState = 'Current Status';
+  showAdv(event){
+  if ( event.target.checked ) {
+      this.advance = true;
+      this.current = true;
+      this.nominee = false;
+      this.neft = false;
+      this.more = false;
+      this.doc = false;
+      this.notes = false;
+      this.activeState = 'Current Status';
+ }
+ if (!event.target.checked){
+  this.advance = false;
+  this.current = false;
+  this.nominee = false;
+  this.neft = false;
+  this.more = false;
+  this.doc = false;
+  this.notes = false;
+ }
+ 
   }
 
 

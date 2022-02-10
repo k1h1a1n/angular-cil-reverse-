@@ -68,3 +68,27 @@ $chart_other: #F1C40F;
   .GraphValueLft li.OthersFunds label,.clsOther {
     background-color: $chart_other;
   }
+
+
+  
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+input{
+  width:220px;
+  height: 30px;
+}
+
+select{
+  width:220px;
+  height: 30px;
+}
