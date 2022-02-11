@@ -13,7 +13,6 @@ const routes: Routes = [
     path: 'home',
     canActivateChild: [AppRouteGuard],
     children: [
-      {path: 'digital-handbook', loadChildren: () => import('./dih-module/dih-routing.module').then(m => m.DIHRoutingModule)},
     ]
   },
   {path:'',redirectTo:'AppStartComponent', pathMatch: 'full' },
